@@ -1,0 +1,53 @@
+/*=============== Custom CSS ===============*/
+
+.animate-spin {
+    animation: spin 0.4s linear infinite !important;
+}
+
+
+/*== Custom BTN ==*/
+
+.custom-btn1 {
+    align-items: center;
+    background-color: #000;
+    border: 2px solid #6f6d6d;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-family: Inter,sans-serif;
+    font-size: 16px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+
+.custom-btn1:hover:after {
+    transform: translate(0, 0);
+}
+
+.custom-btn1:active {
+    background-color: #414141;
+    outline: 0;
+}
+
+.custom-btn1:hover {
+    outline: 0;
+}
+
+@media (min-width: 768px) {
+    .custom-btn1 {
+        padding: 0 40px;
+    }
+}
