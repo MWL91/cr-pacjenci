@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\API\OperationsApiController;
+use App\Http\Controllers\API\AuthApiController;
+use App\Http\Controllers\API\OperationsListApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -15,11 +16,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('login',[OperationsApiController::class,'login']);
+Route::post('login',[AuthApiController::class,'login']);
 
 Route::middleware(['auth:sanctum'])->group(function () {
-    Route::get('operations',[OperationsApiController::class,'getOperations']);
-    Route::post('/logout', [OperationsApiController::class, 'logout']);
+    Route::get('operations',OperationsListApiController::class);
+    Route::post('/logout', [AuthApiController::class, 'logout']);
 });
 
 

@@ -20,4 +20,14 @@ class LoginApiRequest extends formRequest
         ];
     }
 
+    public function getEmail(): string
+    {
+        return $this->get('email');
+    }
+
+    public function getPassword(): string
+    {
+        return $this->get('password');
+    }
+
 }
